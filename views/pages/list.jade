@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			table.table.table-hover.table-bordered
+				thead
+					tr
+						th mv name
+						th mv doctor
+						th county
+						th year
+						th record time
+						th view
+						th update
+						th delete
+				tbody
+					each item in movies
+						tr(class="item-id-#{item._id}")
+							td #{item.title}
+							td #{item.doctor}
+							td #{item.country}
+							td #{item.year}
+							//- td #{moment(item.meta.createdAt).format('MM/DD/YY')}
+							td
+								a(target="_blank",href="../movie/#{item._id}") view
+							td
+								a(target="_blank",href="../admin/update/#{item._id}") update
+							td
+								button.btn.btn-danger.del(type="button",data-id="#{item._id}") delete

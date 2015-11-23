@@ -1,0 +1,20 @@
+extends ../layout
+block content
+	.container
+		.row
+			.col-md-7
+				embed(src="#{movie.flash}",allFullScreen="true" quality="high" align="middle" width="620",height="600",algin="middle",type="application/x-shockwave-flash")
+			.col-md-5
+				dl.horizontal
+					dt mv name
+					dd= movie.title
+					dt mv director
+					dd= movie.director
+					dt mv county
+					dd= movie.county
+					dt mv language
+					dd= movie.language
+					dt mv year
+					dd= movie.year
+					dt mv summary
+					dd= movie.summary

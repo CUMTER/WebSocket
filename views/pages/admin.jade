@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			form.form-horizontal(method="post",action="/admin/movie/new")
+				.form-group
+					label.col-sm-3.control-label mv name
+					.col.sm-10
+						input#InputTitle.form-control(type="text",name="movie[title]",value="#{movie.title}")
+				.form-group
+					label.col-sm-3.control-label mv doctor
+					.col.sm-10
+						input#InputDoctor.form-control(type="text",name="movie[doctor]",value="#{movie.doctor}")
+				.form-group
+					label.col-sm-3.control-label mv country
+					.col.sm-10
+						input#InputCountry.form-control(type="text",name="movie[country]",value="#{movie.country}")
+				.form-group
+					label.col-sm-3.control-label mv langaue
+					.col.sm-10
+						input#InputLangaue.form-control(type="text",name="movie[langaue]",value="#{movie.langaue}")
+				.form-group
+					label.col-sm-3.control-label mv poster
+					.col.sm-10
+						input#InputPoster.form-control(type="text",name="movie[poster]",value="#{movie.poster}")
+				.form-group
+					label.col-sm-3.control-label mv flash
+					.col.sm-10
+						input#InputFlash.form-control(type="text",name="movie[flash]",value="#{movie.flash}")
+				.form-group
+					label.col-sm-3.control-label mv year
+					.col.sm-10
+						input#InputYear.form-control(type="text",name="movie[year]",value="#{movie.year}")
+				.form-group
+					label.col-sm-3.control-label mv summary
+					.col.sm-10
+						input#InputSummary.form-control(type="text",name="movie[summary]",value="#{movie.summary}")
