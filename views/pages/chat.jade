@@ -1,0 +1,14 @@
+extends ../layout
+block content
+	.container
+		.chat-area
+	.container
+		.row
+			.col-md-10
+				<input type="text" id="messageInput" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+			.col-md-2
+				.btn.btn-primary#submitBtn #{submitBtn}
+	.container
+		.row
+			#messages
+

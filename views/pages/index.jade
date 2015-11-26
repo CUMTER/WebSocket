@@ -1,14 +1,13 @@
 extends ../layout
 block content
-	.container
-		.chat-area
-	.container
+	.container.reg-container
 		.row
-			.col-md-10
-				<input type="text" id="messageInput" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-			.col-md-2
-				.btn.btn-primary#submitBtn #{submitBtn}
-	.container
-		.row
-			#messages
-
+			span.col-md-2 #{enterName}
+			input#regUserName.col-md-6(placeholder="User name")
+			span.col-md-4
+		.row.reg-margin-top
+			span.col-md-2 #{enterPwd}
+			input#regPwd.col-md-6(placeholder="Password")
+			span.col-md-4
+		.row.reg-margin-top
+			#regSubmit.reg-submit.btn.btn-primary #{submit}
